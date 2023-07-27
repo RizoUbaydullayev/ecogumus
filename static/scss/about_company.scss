@@ -1,0 +1,87 @@
+/*=========================  header_content   ================================================*/
+.header_content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        width: 250px;
+    }
+    .title {
+        font-family: "Montserrat-Bold", sans-serif;
+        width: 70%;
+        font-size: 48px;
+    }
+}
+
+/*=========================  about_company   ================================================*/
+.about_company {
+    line-height: 1.5;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .about_company_title {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 48px;
+        font-family: "Montserrat-Bold", sans-serif;
+        .about_company_subtitle {
+            margin-top: 30px;
+            font-family: "Montserrat-Medium", sans-serif;
+            display: block;
+            font-size: 14px;
+        }
+    }
+    .about_company_history {
+        display: flex;
+        gap: 25px;
+        .history_colum {
+            display: flex;
+            gap: 25px;
+            flex-direction: column;
+            p {
+
+            }
+        }
+    }
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (max-width: 768px) {
+    .header_content {
+        flex-direction: column;
+        text-align: center;
+        .title {
+            width: 100%;
+            font-size: 36px;
+        }
+    }
+    .about_company {
+        .about_company_title {
+            font-size: 36px;
+            .about_company_subtitle {
+
+            }
+        }
+        .about_company_history {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header_content {
+        .title {
+            font-size: 28px;
+        }
+        .logo {
+            width: 200px;
+        }
+    }
+    .about_company {
+        .about_company_title {
+            font-size: 28px;
+        }
+    }
+}

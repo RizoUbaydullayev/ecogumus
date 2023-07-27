@@ -1,0 +1,423 @@
+/*=========================  header   ================================================*/
+.header {
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header .header_content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .header_content .header_main {
+  background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  padding: 50px 20px;
+  border-radius: 10px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header .header_content .header_main .header_title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 48px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+.header .header_content .header_main .header_subtitle {
+  font-family: "Montserrat-Medium", sans-serif;
+  color: #000;
+  font-size: 24px;
+}
+
+.header .header_content .header_button {
+  display: flex;
+  justify-content: end;
+}
+
+.header .header_content .header_button .button_more {
+  text-align: center;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(-90deg, yellow 0%, #ffff6b 30%, white 100%);
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  history   ================================================*/
+.history {
+  display: flex;
+  margin: 80px 0;
+  height: 400px;
+  background-image: url("../img/history_bg.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  align-items: center;
+}
+
+.history .history_wrap .history_main {
+  padding-right: 10px;
+  width: 50%;
+}
+
+.history .history_wrap .history_main .history_title {
+  color: #ff0000;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 80px;
+}
+
+.history .history_wrap .history_main .history_subtitle {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+}
+
+.history .history_wrap .history_main .history_text {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+/*=========================  about_company   ================================================*/
+.about_company {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/logo.png");
+  background-position: 11% center;
+  background-repeat: no-repeat;
+  background-size: 400px auto;
+  align-items: center;
+}
+
+.about_company .about_company_wrap {
+  display: flex;
+  justify-content: end;
+}
+
+.about_company .about_company_wrap .about_company_main {
+  padding: 50px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: end;
+}
+
+.about_company .about_company_wrap .about_company_main .about_company_title {
+  font-size: 36px;
+  color: #ff0000;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+.about_company .about_company_wrap .about_company_main .about_company_link {
+  text-align: center;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  our_product   ================================================*/
+.our_product {
+  padding: 80px 0;
+  position: relative;
+}
+
+.our_product .our_product_title {
+  width: 45%;
+  font-size: 48px;
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #000000;
+}
+
+.our_product .our_product_wrap .our_product_main {
+  margin-top: 50px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.our_product .our_product_wrap .our_product_main .product_name {
+  font-size: 24px;
+  font-family: "Montserrat-Medium", sans-serif;
+}
+
+.our_product .our_product_wrap .our_product_main .product_description {
+  font-size: 14px;
+}
+
+.our_product .our_product_wrap .our_product_main .our_product_more_btn {
+  text-align: center;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+.our_product .our_product_wrap .our_product_slider {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  overflow: hidden;
+}
+
+.our_product .our_product_wrap .our_product_slider .our_product_slider_wrap {
+  user-select: none;
+  display: flex;
+}
+
+.our_product .our_product_wrap .our_product_slider .our_product_slider_wrap .page {
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.our_product .our_product_wrap .our_product_slider .our_product_slider_wrap .page .page_content {
+  height: 400px;
+}
+
+.our_product .our_product_wrap .our_product_slider .swiper-button-next,
+.our_product .our_product_wrap .our_product_slider .swiper-button-prev {
+  color: #ffff6b;
+}
+
+/*=========================  numbers   ================================================*/
+.numbers {
+  padding: 160px 0 80px 0;
+  background: linear-gradient(180deg, white 7%, #fffff1 21%, #ffffe2 36%, #ffffd0 51%, #ffffbf 64%, yellow 100%);
+}
+
+.numbers .numbers_title {
+  font-size: 48px;
+  font-family: "Montserrat-Bold", sans-serif;
+  text-align: center;
+}
+
+.numbers .numbers_main {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.numbers .numbers_main .info {
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+  width: 250px;
+}
+
+.numbers .numbers_main .info .number {
+  color: #ff0000;
+  font-size: 48px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+.numbers .numbers_main .info p {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+}
+
+/*=========================  certificates   ================================================*/
+.certificates {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.certificates .certificates_slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.certificates .certificates_slider .certificates_slider_wrap {
+  display: flex;
+}
+
+.certificates .certificates_slider .certificates_slider_wrap .page {
+  height: 500px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.certificates .certificates_slider .certificates_slider_wrap .page img {
+  object-fit: cover;
+  border: #000 solid 2px;
+}
+
+.certificates .certificates_slider .swiper-pagination {
+  bottom: 0;
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (min-width: 1921px) {
+  .about_company {
+    background-position: calc(50% - 700px) center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header .header_content .header_button {
+    margin-top: 30px;
+  }
+  .our_product {
+    position: relative;
+    padding-bottom: 450px;
+  }
+  .our_product .our_product_inner .our_product_title {
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_main {
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_slider {
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .header_content .header_main {
+    padding: 30px 10px;
+    width: 95%;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 36px;
+  }
+  .header .header_content .header_main .header_subtitle {
+    font-size: 20px;
+  }
+  .header .header_content .header_button {
+    margin-top: 30px;
+  }
+  .history {
+    height: 500px;
+    background-size: cover;
+    background-position: center left;
+  }
+  .history .history_wrap {
+    display: flex;
+    justify-content: end;
+  }
+  .history .history_wrap .history_main {
+    padding: 30px 10px;
+    border-radius: 10px;
+    width: 80%;
+    background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  }
+  .history .history_wrap .history_main .history_title {
+    font-size: 46px;
+  }
+  .history .history_wrap .history_main .history_subtitle {
+    font-size: 20px;
+  }
+  .about_company {
+    background-position: 3% top;
+    background-size: 309px auto;
+  }
+  .about_company .about_company_wrap .about_company_main {
+    width: 90%;
+  }
+  .our_product {
+    position: relative;
+    padding-bottom: 350px;
+  }
+  .our_product .our_product_inner .our_product_title {
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_main {
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_slider {
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_slider .our_product_slider_wrap .page .page_content {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .header_content .header_main {
+    width: 100%;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 24px;
+  }
+  .header .header_content .header_main .header_subtitle {
+    font-size: 16px;
+  }
+  .header .header_content .header_button {
+    margin-top: 30px;
+  }
+  .history .history_wrap .history_main {
+    width: 100%;
+  }
+  .history .history_wrap .history_main .history_title {
+    font-size: 40px;
+  }
+  .about_company {
+    background-position: -115% 8px;
+    background-size: 309px auto;
+  }
+  .about_company .about_company_wrap .about_company_main {
+    padding: 30px 10px;
+    width: 100%;
+  }
+  .about_company .about_company_wrap .about_company_main .about_company_title {
+    font-size: 25px;
+  }
+  .our_product {
+    position: relative;
+    padding-bottom: 300px;
+  }
+  .our_product .our_product_inner .our_product_title {
+    font-size: 40px;
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_main {
+    width: 100%;
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_slider {
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .our_product .our_product_inner .our_product_wrap .our_product_slider .our_product_slider_wrap .page .page_content {
+    height: 250px;
+  }
+  .numbers .numbers_wrap .numbers_title {
+    font-size: 40px;
+  }
+  .numbers .numbers_wrap .numbers_main .info .number {
+    font-size: 40px;
+  }
+  .certificates .certificates_slider .certificates_slider_wrap .page {
+    height: 250px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

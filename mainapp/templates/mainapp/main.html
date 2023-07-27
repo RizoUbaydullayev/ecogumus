@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+{% endblock links %}
+{% block title %} {{title}} {% endblock title %}
+{% block header_content %}
+<div class="header_main">
+    <h1 class="header_title">Удобрения для богатого урожая!</h1>
+    <h2 class="header_subtitle">
+        Мы ведущий производитель органических миниральных удобрений в Узбекистане
+    </h2>
+</div>
+<div class="header_button">
+    <a class="button_more" href="{% url 'mainapp:about_company_page' lang=language %}">Подробнее...</a>
+</div>
+{% endblock header_content %}
+
+{% block content %}
+<section class="history">
+    <div class="history_wrap container">
+        <div class="history_main ">
+            <div class="history_title">
+                30 лет
+            </div>
+            <div class="history_subtitle">
+                восхождения к вершинам плодородия
+            </div>
+            <div class="history_text">
+                "Ecogumus" была основана в 1993 году с целью производства 
+                инновационных минеральных удобрений. За двадцать лет компания 
+                стала лидером в отрасли, предоставляя эффективные решения для
+                сельского хозяйства по всему миру.
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="about_company">
+    <div class="about_company_wrap container">
+        <div class="about_company_main">
+            <div class="about_company_title">
+                Ведущий производитель органических миниральных удобрений в Узбекистане
+            </div>
+            <p class="about_company_text">
+                В далеком 2000 году, группа предприимчивых ученых и экспертов 
+                сельского хозяйства решила объединить свои усилия для создания 
+                инновационной компании по производству минеральных удобрений. 
+                Они видели огромный потенциал в разработке уникальных формул 
+                удобрений, способных значительно увеличить урожайность и 
+                качество сельскохозяйственных культур.
+            </p>
+            <p class="about_company_text">
+                Компания стала называться "Ecogumus" и начала свой путь с 
+                небольшой лаборатории в маленьком городке. Несмотря на 
+                ограниченные ресурсы, команда ученых работала с неисчерпаемым 
+                энтузиазмом и решимостью. Первые годы были непростыми, но 
+                благодаря научному таланту и трудолюбию, они смогли разработать 
+                несколько уникальных формул минеральных удобрений.
+            </p>
+            <a href="" class="about_company_link">О компании</a>
+        </div>
+    </div>
+</section>
+<section class="our_product">
+    <div class="our_product_inner container">
+        <div class="our_product_title">
+            Наш продукт
+        </div>
+        <div class="our_product_wrap ">
+            <div class="our_product_main">
+                <div class="product_name">
+                "Biohumus" органо-минеральное удобрение
+                </div>
+                <div class="product_description">
+                    <p>
+                        Наша уникальная разработка - это высококачественная, мелко 
+                        гранулированная масса органических веществ с неповторимыми 
+                        гранулами. Ваш сад, огород или растения получат богатое и 
+                        сбалансированное питание, которое приведет к восхитительной 
+                        производительности и великолепной зелени. Дайте вашим 
+                        растениям уход, который они заслуживают, с нашим 
+                        эксклюзивным продуктом, природным даром от самой матушки 
+                        земли и упакованным с любовью и заботой!
+                    </p>
+                </div>
+                <a class="our_product_more_btn" href="">
+                    Подробнее
+                </a>
+            </div>
+            <div class="our_product_slider">
+                <div class="our_product_slider_wrap">
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_1.jpg' %});">
+                        <div class="page_content" >
+                        </div>
+                    </div>
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_2.jpg' %});">
+                        <div class="page_content">
+                        </div>
+                    </div>
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_3.jpg' %});">
+                        <div class="page_content">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="numbers ">
+    <div class="numbers_wrap container">
+        <div class="numbers_title">Компания в цифрах</div>
+        <div class="numbers_main">
+            <div class="info">
+                <div class="number">
+                    30
+                </div>
+                <p>ЛЕТ УСПЕШНОЙ РАБОТЫ НА РЫНКЕ
+                </p>
+            </div>
+            <div class="info">
+                <div class="number">
+                    200т
+                </div>
+                <p>ЕЖЕГОДНЫЙ ЭКСПОРТ</p>
+            </div>
+            <div class="info">
+                <div class="number">
+                    100%
+                </div>
+                <p>КОНТРОЛЬ ПРОИЗВОДИМОЙ ПРОДУКЦИИ</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="certificates container">
+    <div class="certificates_slider">
+        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
+            <a href="{% static './img/certificate_1.png' %}" class="page">
+                <img src="{% static './img/certificate_1.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_2.png' %}" class="page">
+                <img src="{% static './img/certificate_2.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_3.png' %}" class="page">
+                <img src="{% static './img/certificate_3.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_4.png' %}" class="page">
+                <img src="{% static './img/certificate_4.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_5.png' %}" class="page">
+                <img src="{% static './img/certificate_5.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_6.png' %}" class="page">
+                <img src="{% static './img/certificate_6.png' %}" alt="certificate">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+{{context.language}}
+{% endblock content %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock scripts %}

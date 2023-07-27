@@ -1,0 +1,74 @@
+/*=========================  header   ================================================*/
+.header {
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header .header_content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .header_content .header_main {
+  background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
+  padding: 50px 20px;
+  border-radius: 10px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header .header_content .header_main .header_title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 48px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  cooperation_description   ================================================*/
+.cooperation_description {
+  font-size: 16px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  gap: 30px;
+}
+
+/*=========================  cooperation_title   ================================================*/
+.cooperation_title {
+  font-size: 36px;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+/*=========================  adaptive   ================================================*/
+@media screen and (max-width: 768px) {
+  .header .header_content .header_main {
+    padding: 30px 10px;
+    width: 95%;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .header_content .header_main {
+    width: 100%;
+  }
+  .header .header_content .header_main .header_title {
+    font-size: 24px;
+  }
+  .cooperation_title {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=cooperation.css.map */

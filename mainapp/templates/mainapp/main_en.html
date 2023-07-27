@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+{% endblock links %}
+{% block title %} {{title}} {% endblock title %}
+{% block header_content %}
+<div class="header_main">
+    <h1 class="header_title">FERTILIZERS FOR A RICH HARVEST!</h1>
+    <h2 class="header_subtitle">
+        We are the leading producer of organic mineral fertilizers in Uzbekistan.
+    </h2>
+</div>
+<div class="header_button">
+    <a class="button_more" href="{% url 'mainapp:about_company_page' lang=language %}">More detailed...</a>
+</div>
+{% endblock header_content %}
+
+{% block content %}
+<section class="history">
+    <div class="history_wrap container">
+        <div class="history_main ">
+            <div class="history_title">
+                30 years
+            </div>
+            <div class="history_subtitle">
+                of climbing to the heights of fertility
+            </div>
+            <div class="history_text">
+                Ecogumus was founded in 1993 with the aim of producing innovative mineral fertilizers. For twenty years, the company has become a leader in the industry, providing effective solutions for agriculture around the world.
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="about_company">
+    <div class="about_company_wrap container">
+        <div class="about_company_main">
+            <div class="about_company_title">
+                The leading producer of organic mineral fertilizers in Uzbekistan
+            </div>
+            <p class="about_company_text">
+                Back in 1993, a group of enterprising scientists and agricultural experts decided to join forces to create an innovative company for the production of mineral fertilizers. They saw a huge potential in the development of unique fertilizer formulas that could significantly increase the yield and quality of crops.
+            </p>
+            <p class="about_company_text">
+                The company became known as "Ecogumus" and began its journey with a small laboratory in a small town. Despite limited resources, the team of scientists worked with inexhaustible enthusiasm and determination. The first years were not easy, but thanks to scientific talent and hard work, they were able to develop several unique formulas of mineral fertilizers.
+            </p>
+            <a href="" class="about_company_link">About the company</a>
+        </div>
+    </div>
+</section>
+<section class="our_product">
+    <div class="our_product_inner container">
+        <div class="our_product_title">
+            Our product
+        </div>
+        <div class="our_product_wrap ">
+            <div class="our_product_main">
+                <div class="product_name">
+                    "Biohumus" organomineral fertilizer"
+                </div>
+                <div class="product_description">
+                    <p>
+                        Our unique development is a high-quality, finely granular mass of organic substances with unique granules. Your garden, vegetable garden or plants will receive a rich and balanced nutrition, which will lead to delicious productivity and magnificent greenery. Give your plants the care they deserve with our exclusive product, a natural gift from Mother Earth herself and packed with love and care!
+                    </p>
+                </div>
+                <a class="our_product_more_btn" href="">
+                    More detailed
+                </a>
+            </div>
+            <div class="our_product_slider">
+                <div class="our_product_slider_wrap">
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_1.jpg' %});">
+                        <div class="page_content" >
+                        </div>
+                    </div>
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_2.jpg' %});">
+                        <div class="page_content">
+                        </div>
+                    </div>
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_3.jpg' %});">
+                        <div class="page_content">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="numbers ">
+    <div class="numbers_wrap container">
+        <div class="numbers_title">The company in numbers</div>
+        <div class="numbers_main">
+            <div class="info">
+                <div class="number">
+                    30
+                </div>
+                <p>YEARS OF SUCCESSFUL WORK IN THE MARKET
+                </p>
+            </div>
+            <div class="info">
+                <div class="number">
+                    200т
+                </div>
+                <p>ANNUAL EXPORTS</p>
+            </div>
+            <div class="info">
+                <div class="number">
+                    100%
+                </div>
+                <p>CONTROL OF MANUFACTURED PRODUCTS</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="certificates container">
+    <div class="certificates_slider">
+        <div id="animated-thumbnails-gallery" class="certificates_slider_wrap">
+            <a href="{% static './img/certificate_1.png' %}" class="page">
+                <img src="{% static './img/certificate_1.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_2.png' %}" class="page">
+                <img src="{% static './img/certificate_2.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_3.png' %}" class="page">
+                <img src="{% static './img/certificate_3.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_4.png' %}" class="page">
+                <img src="{% static './img/certificate_4.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_5.png' %}" class="page">
+                <img src="{% static './img/certificate_5.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_6.png' %}" class="page">
+                <img src="{% static './img/certificate_6.png' %}" alt="certificate">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+{{context.language}}
+{% endblock content %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock scripts %}

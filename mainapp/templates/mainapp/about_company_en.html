@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/about_company.css' %}">
+{% endblock links %}
+{% block title %} {{title}} {% endblock title %}
+{% block header_content %}
+
+<div class="title">
+    The leading producer of organic mineral fertilizers in Uzbekistan
+</div>
+<div class="logo">
+    <img src="{% static 'img/logo.png' %}" alt="logo">
+</div>
+{% endblock header_content %}
+{% block content %}
+
+<section class="about_company container">
+    <h2 class="about_company_title">
+        ABOUT THE COMPANY
+        <span class="about_company_subtitle">
+            Ecogumus was founded in 1993 with the aim of producing innovative mineral fertilizers. For thirty years, the company has become a leader in the industry, providing effective solutions for agriculture around the world.
+        </span>
+    </h2>
+    <div class="about_company_history">
+        <div class="history_colum">
+            <p>
+                The company became known as "Ecogumus" and began its journey with a small laboratory in a small town. Despite limited resources, the team of scientists worked with inexhaustible enthusiasm and determination. The first years were not easy, but thanks to scientific talent and hard work, they were able to develop several unique formulas of mineral fertilizers.
+            </p>
+            <p>
+                Every year Ecogumus expanded its production capabilities. Over time, their fertilizers have become in great demand among farmers and agriculture around the world. The company actively collaborated with agronomists to adapt its products to different soils and climatic conditions.
+            </p>
+            <p>
+                The success of Ecogumus continued to grow, and they became not only a leading producer of mineral fertilizers, but also leaders in the field of agricultural research. The company invested in the development of new technologies, which allowed them to create even more efficient and environmentally friendly products.
+            </p>
+        </div>
+        <div class="history_colum">
+            <p>
+                Over time, Ecogumus has become known as a symbol of innovation and quality in agriculture. They actively participated in sustainable rural development, providing knowledge and resources to increase yields and improve the lives of local farmers.
+            </p>
+            <p>
+                Today, twenty years after its foundation, Ecogumus continues to delight its customers with innovative products and solutions that contribute to the growth of agriculture and the well-being of society. Their efforts and dedication to agriculture have become a real contribution to ensuring food security and prosperity of world agriculture.
+            </p>
+        </div>
+    </div> 
+</section>
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/about_company.js'%}"></script>
+{% endblock scripts %}

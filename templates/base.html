@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %} ">
+    <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'favicon/favicon-16x16.png' %} ">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %} ">
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    
+    {% block links %}{% endblock links %}
+    
+    
+    <title>{% block title %}Ecogumus{% endblock title %}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_wrap ">
+            <div class="header_top container">
+                <div class="logo">
+                    <a href="{% url 'mainapp:main_page' lang=language%}"><img src="{% static 'img/logo.png'%}" alt="logo"></a>
+                </div>
+                <div class="header_top-inner">
+                    <nav class="menu hide_menu">
+                        <ul class="menu_list">
+                            <li class="menu_list-item">
+                                <a href="{% url 'mainapp:main_page' lang=language%}" class="menu_list-link">
+                                    {% if language == None  %}
+                                    Главная
+                                    {% endif %}
+                                    {% if language == 'en'  %}
+                                    Main
+                                    {% endif %}
+                                    {% if language == 'ru'  %}
+                                    Главная
+                                    {% endif %}
+                                    {% if language == 'uz'  %}
+                                    Bosh sahifa
+                                    {% endif %}
+                                    </a>
+                            </li>
+                            <li class="menu_list-item">
+                                <a href="{% url 'mainapp:about_company_page' lang=language %}" class="menu_list-link">
+                                    {% if language == None  %}
+                                    О Компании
+                                    {% endif %}
+                                    {% if language == 'en'  %}
+                                    About the Company
+                                    {% endif %}
+                                    {% if language == 'ru'  %}
+                                    О Компании
+                                    {% endif %}
+                                    {% if language == 'uz'  %}
+                                    Tashkilot haqida
+                                    {% endif %}    
+                                </a>
+                            </li>
+                            <li class="menu_list-item">
+                                <a href="{% url 'mainapp:product_page' lang=language %}" class="menu_list-link">
+                                    {% if language == None  %}
+                                    Продукция
+                                    {% endif %}
+                                    {% if language == 'en'  %}
+                                    Product
+                                    {% endif %}
+                                    {% if language == 'ru'  %}
+                                    Продукция
+                                    {% endif %}
+                                    {% if language == 'uz'  %}
+                                    Mahsulot
+                                    {% endif %}
+                                </a>
+                            </li>
+                            <li class="menu_list-item">
+                                <a href="{% url 'mainapp:cooperation_page' lang=language %}" class="menu_list-link">
+                                    {% if language == None  %}
+                                    Сотрудничество
+                                    {% endif %}
+                                    {% if language == 'en'  %}
+                                    Cooperation
+                                    {% endif %}
+                                    {% if language == 'ru'  %}
+                                    Сотрудничество
+                                    {% endif %}
+                                    {% if language == 'uz'  %}
+                                    Hamkorlik
+                                    {% endif %}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="wrap">
+                        <div class="connection">
+                            <div class="tg_link connection-el">
+                                <a href="https://t.me/BahodirBX">
+                                    <img src="{% static 'img/telegram.svg' %}" alt="telegram">
+                                </a>
+                            </div>
+                            <div class="call_link connection-el">
+                                <a href="tel:+998936418545">
+                                    <img src="{% static 'img/phone.svg' %}" alt="phone">
+                                </a>
+                            </div>
+                            <div class="youtube_link connection-el">
+                                <a href="https://www.youtube.com/@biogumusfargonaekogumus8419">
+                                    <img src="{% static 'img/youtube.svg' %}" alt="youtube" >
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lang_selection">
+                            {% if lang == None %}
+                                <span id="selected_language" class="act_lang">{{langs.ru}}</span>
+                            {% endif %}
+                            {% if lang == 'ru' %}
+                                <span id="selected_language" class="act_lang">{{langs.ru}}</span>
+                            {% endif %}
+                            {% if lang == 'en' %}
+                                <span id="selected_language" class="act_lang">{{langs.en}}</span>
+                            {% endif %}
+                            {% if lang == 'uz' %}
+                                <span id="selected_language" class="act_lang">{{langs.uz}}</span>
+                            {% endif %}
+                            <ul id="list_languages" class="list_languages">
+                                <li class="lang"><a href="{% url 'mainapp:main_page' lang='ru'%}">Русский</a> </li>
+                                <li class="lang"><a href="{% url 'mainapp:main_page' lang='uz'%}">O'zbek</a></li>
+                                <li class="lang"><a href="{% url 'mainapp:main_page' lang='en'%}">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="menu_burger_btn"></button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_content container">
+            {% block header_content %}
+            {% endblock header_content %}
+        </div>
+    </header>
+    {% block content %}
+    
+    {% endblock content %}
+    <footer class="footer ">
+        <div class="footer_wrap container">
+                    <div class="footer_main">
+            <div class="ask_question">
+                <div class="footer_title">
+                    {% if language == None  %}
+                    Остались вопросы? <span>Свяжитесь с нами!</span> 
+                    {% endif %}
+                    {% if language == 'en'  %}
+                    Any other questions? <span>Contact us!</span> 
+                    {% endif %}
+                    {% if language == 'ru'  %}
+                    Остались вопросы? <span>Свяжитесь с нами!</span> 
+                    {% endif %}
+                    {% if language == 'uz'  %}
+                    Savollar qoldimi? <span>Biz bilan bog'laning!</span> 
+                    {% endif %}
+                </div> 
+                <div class="contacts">
+                    <div class="phone contact">
+                        <div class="contact_title">
+                            {% if language == None  %}
+                            Телефон:
+                            {% endif %}
+                            {% if language == 'en'  %}
+                            Phone: 
+                            {% endif %}
+                            {% if language == 'ru'  %}
+                            Телефон:
+                            {% endif %}
+                            {% if language == 'uz'  %}
+                            Telefon:
+                            {% endif %}
+                        </div>
+                        <ul>
+                            <li><a href="tel:+998936418545">+99893 641 85-45</a></li>
+                            <li><a href="tel:+998934802151">+99893 480 21-51</a></li>
+                            <li><a href="tel:+998906344575">+99890 634 45-75</a></li>
+                            <li><a href="tel:+998732446240">+99873 244 62-40</a></li>
+                        </ul>
+                    </div>
+                    <div class="email contact">
+                        <div class="contact_title">
+                            Email:
+                        </div>
+                        <ul>
+                            <li><a href="Bashfergana@mail.ru">Bashfergana@mail.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="schedule">
+                    {% if language == None  %}
+                    <span><strong>График работы: </strong>Пн-Суб 9:00-18:00</span>
+                    {% endif %}
+                    {% if language == 'en'  %}
+                    <span><strong>Opening hours: </strong>Mon.-Sat. 9:00-18:00</span>
+                    {% endif %}
+                    {% if language == 'ru'  %}
+                    <span><strong>График работы: </strong>Пн-Суб 9:00-18:00</span>
+                    {% endif %}
+                    {% if language == 'uz'  %}
+                    <span><strong>Ishlash jadvali: </strong>Du-Shan 9:00-18:00</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="map">
+                <iframe class="map_main" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265.4435346774203!2d71.77091825876191!3d40.389710476398754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb834fc4bd72f9%3A0x5c1d3ea0c9a27e0d!2zMzggQm9idXIga28nY2hhc2ksIEZhcmcnb25hLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1689826117602!5m2!1sru!2s" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="address">
+                    {% if language == None  %}
+                    Ферганская область город Фергана ул. Бобура 38
+                    {% endif %}
+                    {% if language == 'en'  %}
+                    Ferghana region the city of Ferghana 38 Babur street
+                    {% endif %}
+                    {% if language == 'ru'  %}
+                    Ферганская область город Фергана ул. Бобура 38
+                    {% endif %}
+                    {% if language == 'uz'  %}
+                    Farg'ona viloyati Farg'ona shahri Bobur ko'chasi 38
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            {% if language == None  %}
+            Copyright © ООО «Экогумус», УЗБЕКИСТАН 2023
+            {% endif %}
+            {% if language == 'en'  %}
+            Copyright © Ecohumus LLC, UZBEKISTAN 2023
+            {% endif %}
+            {% if language == 'ru'  %}
+            Copyright © ООО «Экогумус», УЗБЕКИСТАН 2023
+            {% endif %}
+            {% if language == 'uz'  %}
+            Copyright © "Ekogumus" MCHJ, O'zbekiston 2023
+            {% endif %}
+        </div>
+        </div>
+    </footer>   
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>
