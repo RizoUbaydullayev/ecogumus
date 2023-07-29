@@ -21,4 +21,4 @@ wcwidth==0.2.6
 
 # For production
 gunicorn
-psycopg2-binary
+psycopg2-binary         
