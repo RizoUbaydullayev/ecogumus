@@ -24,11 +24,11 @@ class MainPageView(TemplateView):
             "uz": "O'zbek"
         }
         if lang == 'ru':
-            context['title'] = 'Ecogumus | УДОБРЕНИЯ ДЛЯ БОГАТОГО УРОЖАЯ!'
+            context['title'] = 'Ekogumus | УДОБРЕНИЯ ДЛЯ БОГАТОГО УРОЖАЯ!'
         if lang == 'en':
-            context['title'] = 'Ecogumus | FERTILIZERS FOR A RICH HARVEST!'
+            context['title'] = 'Ekogumus | FERTILIZERS FOR A RICH HARVEST!'
         if lang == 'uz':
-            context['title'] = "Ecogumus | BOY HOSILDORLIK UCHUN O'G'ITLAR!"
+            context['title'] = "Ekogumus | BOY HOSILDORLIK UCHUN O'G'ITLAR!"
         return context
 
 
@@ -56,11 +56,11 @@ class AboutCompanyPageView(TemplateView):
             "uz": "O'zbek"
         }
         if lang == 'ru':
-            context['title'] = 'Ecogumus | О компании'
+            context['title'] = 'Ekogumus | О компании'
         if lang == 'en':
-            context['title'] = 'Ecogumus | About the Company'
+            context['title'] = 'Ekogumus | About the Company'
         if lang == 'uz':
-            context['title'] = "Ecogumus | Tashkilot haqida"
+            context['title'] = "Ekogumus | Tashkilot haqida"
         return context
 
 
@@ -88,11 +88,11 @@ class ProductPageView(TemplateView):
             "uz": "O'zbek"
         }
         if lang == 'ru':
-            context['title'] = 'Ecogumus | Продукция'
+            context['title'] = 'Ekogumus | Продукция'
         if lang == 'en':
-            context['title'] = 'Ecogumus | Product'
+            context['title'] = 'Ekogumus | Product'
         if lang == 'uz':
-            context['title'] = "Ecogumus | Mahsulot"
+            context['title'] = "Ekogumus | Mahsulot"
         return context
 
 

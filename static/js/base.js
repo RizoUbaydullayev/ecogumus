@@ -1,3 +1,36 @@
+
+// ================ footer ================================================
+
+let map = document.querySelector('.map_main');
+function adaptive(width) {
+    if (width > 1920) {
+        map.setAttribute('width', '500');
+    }
+    if (width <= 1920 && width > 1280) {
+        map.setAttribute('width', '500');
+    }
+    if (width <= 1280 && width > 1024) {
+        map.setAttribute('width', '500');
+    }
+    if (width <= 1024 && width > 768) {
+        map.setAttribute('width', '280');
+    }
+    if (width <= 768 && width > 425) {
+        map.setAttribute('width', '400');
+    }
+    if (width <= 425 && width > 320) {
+        map.setAttribute('width', '280');
+    }
+    if (width <= 320) {map.setAttribute('width', '250');}
+};
+
+adaptive(window.innerWidth);
+
+
+// window.addEventListener("resize", () => {
+// 	adaptive(window.innerWidth);
+// });
+
 // ================ Header ================================================
 let selectedLanguage = document.querySelector('#selected_language');
 let listLanguages = document.querySelector('#list_languages');
@@ -24,30 +57,4 @@ menuBurgerBtn.addEventListener('click', () => {
 closeBtnEl.addEventListener('click', () => {
     menuList.parentNode.classList.add('hide_menu');
 })
-let map = document.querySelector('.map_main');
-function adaptive(width) {
-    if (width > 1920) {
-        map.setAttribute('width', '500');
-    }
-    if (width <= 1920 && width > 1280) {
-        map.setAttribute('width', '500');
-    }
-    if (width <= 1280 && width > 1024) {
-        map.setAttribute('width', '500');
-    }
-    if (width <= 1024 && width > 768) {
-        map.setAttribute('width', '280');
-    }
-    if (width <= 768 && width > 425) {
-        map.setAttribute('width', '400');
-    }
-    if (width <= 425 && width > 320) {
-        map.setAttribute('width', '280');
-    }
-    if (width <= 320) {map.setAttribute('width', '250');}
-};
 
-adaptive(window.innerWidth);
-// window.addEventListener("resize", () => {
-// 	adaptive(window.innerWidth);
-// });
