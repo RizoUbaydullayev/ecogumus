@@ -191,6 +191,7 @@
 
 .our_product .our_product_wrap .our_product_slider .our_product_slider_wrap .page {
   background-size: cover;
+  background-position: center;
   flex-shrink: 0;
 }
 
