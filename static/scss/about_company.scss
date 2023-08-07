@@ -22,15 +22,37 @@
     padding-top: 80px;
     padding-bottom: 80px;
     .about_company_title {
+        .title {
+            text-align: center;
+            font-size: 48px;
+            font-family: "Montserrat-Bold", sans-serif;
+            .wrap {
+                display: inline-block;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 0 5px;
+            }
+        }
+        position: relative;
         margin-bottom: 50px;
-        text-align: center;
-        font-size: 48px;
-        font-family: "Montserrat-Bold", sans-serif;
+
         .about_company_subtitle {
-            margin-top: 30px;
+            margin-top: 100px;
             font-family: "Montserrat-Medium", sans-serif;
             display: block;
             font-size: 14px;
+        }
+        .title_bg {
+            z-index: -5;
+            top: 0;
+            transform: translateY(-38%);
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .img_bg {
+                width: 150px;
+            }
         }
     }
     .about_company_history {
@@ -41,7 +63,6 @@
             gap: 25px;
             flex-direction: column;
             p {
-
             }
         }
     }
@@ -59,9 +80,11 @@
     }
     .about_company {
         .about_company_title {
-            font-size: 36px;
-            .about_company_subtitle {
+            .title {
+                font-size: 36px;
+            }
 
+            .about_company_subtitle {
             }
         }
         .about_company_history {
@@ -73,7 +96,7 @@
 @media screen and (max-width: 425px) {
     .header_content {
         .title {
-            font-size: 28px;
+            font-size: 21px;
         }
         .logo {
             width: 200px;
@@ -81,7 +104,14 @@
     }
     .about_company {
         .about_company_title {
-            font-size: 28px;
+            .title {
+                font-size: 28px;
+            }
+            .title_bg {
+                .img_bg {
+                    width: 100px;
+                }
+            }
         }
     }
 }

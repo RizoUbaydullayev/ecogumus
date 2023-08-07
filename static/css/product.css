@@ -1,6 +1,6 @@
 /*=========================  header   ================================================*/
 .header {
-  background-image: url("../img/header_bg.jpg");
+  background-image: url("../img/header_bg_2.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,6 +43,8 @@
 }
 
 .product_description .result ol {
+  color: #ff0000;
+  font-family: "Montserrat-Bold", sans-serif;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
