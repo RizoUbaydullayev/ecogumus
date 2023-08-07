@@ -93,33 +93,38 @@
 /*=========================  about_company   ================================================*/
 .about_company {
     padding: 80px 0;
-    display: flex;
-    align-items: center;
-    background-image: url("../img/certificate_8.png");
-    background-position: 11% center;
-    background-repeat: no-repeat;
-    background-size: 400px auto;
-    align-items: center;
     .about_company_wrap {
         display: flex;
-        justify-content: end;
+        gap: 10px;
+        align-items: center;
+        .about_company_ctf {
+            width: 400px;
+            img {
+                border: #000 solid 2px;
+            }
+        }
         .about_company_main {
+            position: relative;
+            width: calc(100% - 380px);
             padding: 50px 20px;
             border-radius: 10px;
-            background: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
-            width: 80%;
+            background-image: linear-gradient(90deg, yellow 0%, #ffff6b 30%, white 100%);
             display: flex;
+            background-repeat: no-repeat;
             flex-direction: column;
             gap: 30px;
             justify-content: end;
             .about_company_title {
+                z-index: 5;
                 font-size: 36px;
                 color: #ff0000;
                 font-family: "Montserrat-Bold", sans-serif;
             }
             .about_company_text {
+                z-index: 5;
             }
             .about_company_link {
+                z-index: 5;
                 text-align: center;
                 display: inline-block;
                 width: 180px;
@@ -135,6 +140,14 @@
                 font-size: 14px;
                 font-family: "Montserrat-Bold", sans-serif;
                 // color: red;
+            }
+            .logo {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                right: 0;
             }
         }
     }
@@ -261,7 +274,6 @@
         .certificates_slider_wrap {
             display: flex;
             .page {
-                
                 height: 500px;
                 flex-shrink: 0;
                 display: flex;
@@ -282,7 +294,6 @@
 
 @media screen and (min-width: 1921px) {
     .about_company {
-        background-position: calc(50% - 700px) center;
         .about_company_wrap {
             .about_company_main {
                 .about_company_title {
@@ -324,6 +335,28 @@
             }
             .header_button {
                 margin-top: 30px;
+            }
+        }
+    }
+    .about_company {
+        .about_company_wrap {
+            flex-direction: column;
+            .about_company_ctf {
+                width: 400px;
+            }
+            .about_company_main {
+                margin-top: 60px;
+                width: 100%;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 150px;
+                    height: 150px;
+                    background-image: url("../img/arrow-curved.svg");
+                    background-size: cover;
+                    top: -120px;
+                    right: 0;
+                }
             }
         }
     }
@@ -389,12 +422,13 @@
         }
     }
     .about_company {
-        background-position: 3% top;
-        background-size: 309px auto;
         .about_company_wrap {
+            .about_company_ctf {
+                width: 300px;
+            }
             .about_company_main {
-                width: 90%;
                 .about_company_title {
+                    font-size: 25px;
                 }
             }
         }
@@ -456,8 +490,6 @@
         }
     }
     .about_company {
-        background-position: -115% 8px;
-        background-size: 309px auto;
         .about_company_wrap {
             .about_company_main {
                 padding: 30px 10px;
@@ -520,4 +552,16 @@
     }
 }
 @media screen and (max-width: 320px) {
+    .about_company {
+        .about_company_wrap {
+            .about_company_ctf {
+                width: 250px;
+            }
+            .about_company_main {
+                .about_company_title {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
 }
