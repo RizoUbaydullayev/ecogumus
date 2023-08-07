@@ -193,6 +193,7 @@
                 display: flex;
                 .page {
                     background-size: cover;
+                    background-position: center;
                     flex-shrink: 0;
                     .page_content {
                         height: 400px;
