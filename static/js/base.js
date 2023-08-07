@@ -16,7 +16,7 @@ function adaptive(width) {
         map.setAttribute('width', '280');
     }
     if (width <= 768 && width > 425) {
-        map.setAttribute('width', '400');
+        map.setAttribute('width', '300');
     }
     if (width <= 425 && width > 320) {
         map.setAttribute('width', '280');

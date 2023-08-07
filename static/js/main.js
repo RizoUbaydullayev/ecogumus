@@ -1,4 +1,12 @@
 // ============= our_product ================
+lightGallery(document.getElementById('about_company_ctf'), {
+    thumbnail: true,
+    animateThumb: false,
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+});
+// ============= our_product ================
 let ourProductSlider = new Swiper('.our_product_slider', {
     wrapperClass: 'our_product_slider_wrap',
     slideClass: 'page',
