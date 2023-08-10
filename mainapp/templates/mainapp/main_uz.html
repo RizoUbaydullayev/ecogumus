@@ -17,7 +17,7 @@
     </h2>
 </div>
 <div class="header_button">
-    <a class="button_more" href="{% url 'mainapp:about_company_page' lang=language %}">Batafsil...</a>
+    <a class="button_more" href="{% url 'mainapp:about_company_page' lang=language %}">Подробнее...</a>
 </div>
 {% endblock header_content %}
 
@@ -44,6 +44,11 @@
 </section>
  <section class="about_company">
     <div class="about_company_wrap container">
+        <div class="about_company_ctf" id="about_company_ctf">
+            <a href="{% static 'img/certificate_8.png' %}">
+                <img src="{% static 'img/certificate_8.png' %}" alt="ctf">
+            </a>
+        </div>
         <div class="about_company_main">
             <div class="about_company_title">
                 Biz mamlakatda orgomineral o'g'itlarni ommaviy ishlab chiqarish bo'yicha muvofiqlik sertifikatga ega yagona tashkilotmiz
@@ -73,6 +78,9 @@
                 o'quvchilar (izdoshlar) bor.
             </p>
             <a href="" class="about_company_link">Tashkilot haqida</a>
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="logo">
+            </div>
         </div>
     </div>
 </section>
@@ -84,7 +92,7 @@
         <div class="our_product_wrap ">
             <div class="our_product_main">
                 <div class="product_name">
-                Biohumus - organomineral o'g'it 
+                    Biohumus - organomineral o'g'it 
                 </div>
                 <div class="product_description">
                     <p>
@@ -114,6 +122,10 @@
                         <div class="page_content">
                         </div>
                     </div>
+                    <div class="page" style="background-image: url({% static './img/product_slider_img_4.jpg' %});">
+                        <div class="page_content">
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -123,7 +135,7 @@
 </section>
 <section class="numbers ">
     <div class="numbers_wrap container">
-        <div class="numbers_title">Tashkilotimiz - raqamlarda </div>
+        <div class="numbers_title">Tashkilotimiz - raqamlarda</div>
         <div class="numbers_main">
             <div class="info">
                 <div class="number">
@@ -156,8 +168,14 @@
             <a href="{% static './img/certificate_8.png' %}" class="page">
                 <img src="{% static './img/certificate_8.png' %}" alt="certificate">
             </a>
+            <a href="{% static './img/certificate_12.png' %}" class="page">
+                <img src="{% static './img/certificate_12.png' %}" alt="certificate">
+            </a>
             <a href="{% static './img/certificate_9.png' %}" class="page">
                 <img src="{% static './img/certificate_9.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_10.png' %}" class="page">
+                <img src="{% static './img/certificate_10.png' %}" alt="certificate">
             </a>
             <a href="{% static './img/certificate_2.png' %}" class="page">
                 <img src="{% static './img/certificate_2.png' %}" alt="certificate">
@@ -176,6 +194,9 @@
             </a>
             <a href="{% static './img/certificate_7.png' %}" class="page">
                 <img src="{% static './img/certificate_7.png' %}" alt="certificate">
+            </a>
+            <a href="{% static './img/certificate_11.png' %}" class="page">
+                <img src="{% static './img/certificate_11.png' %}" alt="certificate">
             </a>
         </div>
         <div class="swiper-pagination"></div>
