@@ -126,3 +126,67 @@ class CooperationPageView(TemplateView):
         if lang == 'uz':
             context['title'] = "Ecogumus | Hamkorlik"
         return context
+
+
+class NewsPageView(TemplateView):
+
+    template_name = 'mainapp/news.html'
+    
+    def get_template_names(self):
+        lang = self.kwargs.get('lang', 'ru')
+        if lang == 'ru':
+            return ['mainapp/news.html']
+        elif lang == 'en':
+            return ['mainapp/news_en.html']
+        elif lang == 'uz':
+            return ['mainapp/news_uz.html']
+        else:
+            return super().get_template_names()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        lang = self.kwargs.get('lang', 'ru')
+        context['language'] = lang
+        context['langs'] = {
+            'ru': "Русский",
+            'en': "English",
+            "uz": "O'zbek"
+        }
+        if lang == 'ru':
+            context['title'] = 'Ecogumus | Новости'
+        if lang == 'en':
+            context['title'] = 'Ecogumus | News'
+        if lang == 'uz':
+            context['title'] = "Ecogumus | Yangiliklar"
+        return context
+    
+
+class OneNewsPageView(TemplateView):
+    template_name = 'mainapp/news_2.html'
+    def get_template_names(self):
+        lang = self.kwargs.get('lang', 'ru')
+        if lang == 'ru':
+            return ['mainapp/news_2.html']
+        elif lang == 'en':
+            return ['mainapp/news_2_en.html']
+        elif lang == 'uz':
+            return ['mainapp/news_2_uz.html']
+        else:
+            return super().get_template_names()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        lang = self.kwargs.get('lang', 'ru')
+        context['language'] = lang
+        context['langs'] = {
+            'ru': "Русский",
+            'en': "English",
+            "uz": "O'zbek"
+        }
+        if lang == 'ru':
+            context['title'] = 'Ecogumus | Новости'
+        if lang == 'en':
+            context['title'] = 'Ecogumus | News'
+        if lang == 'uz':
+            context['title'] = "Ecogumus | Yangiliklar"
+        return context
